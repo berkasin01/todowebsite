@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% from "bootstrap/form.html" import render_form %}
 
-</body>
-</html>
+{% block title %} ToDo List {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1> Welcome ToDo List </h1>
+    <h2>To Get Started Please Login</H2>
+{{ render_form(form) }}
+    <h2>Or</h2>
+    <a href="{{url_for('register_page')}}" class="button">REGISTER</a>
+</div>
+
+{% endblock %}

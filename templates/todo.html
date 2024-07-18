@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% from "bootstrap/form.html" import render_form %}
+
+{% block title %} ToDo List {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>ADD A NEW TASK</h1>
+    {{ render_form(form) }}
+
+
+</div>
+
+
+
+{% endblock %}
