@@ -1,1 +1,12 @@
 {% extends "base.html" %}
+{% from "bootstrap/form.html" import render_form %}
+
+{% block title %} ToDo List {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Login</h1>
+{{ render_form(form) }}
+</div>
+
+{% endblock %}

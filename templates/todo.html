@@ -4,10 +4,31 @@
 {% block title %} ToDo List {% endblock %}
 
 {% block content %}
+
+<div class="container">
+    <ul>
+
+    {% for data in all_data %}
+        <li>
+    {% if data.task_status == '0' %}
+        <h1 class="to_do_item">{{ data.todo }}, {{ data.date }} </h1>
+            <a class="to_do_button" href="{{ url_for('complete',id_num=data.id)}}">Complete Task</a>
+    {% else %}
+        <h1 class="to_do_done_item">Completed: {{ data.todo }}, {{ data.date }} </h1>
+    {% endif %}
+            <a class="to_do_button" href="{{ url_for('delete',id_num=data.id)}}">Delete</a>
+
+            </li>
+    {% endfor %}
+
+</ul>
+</div>
+
+
+
 <div class="container">
     <h1>ADD A NEW TASK</h1>
     {{ render_form(form) }}
-
 
 </div>
 

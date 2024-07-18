@@ -25,10 +25,70 @@
 
 a.button {
     padding: 1px 6px;
-    border: 10px outset buttonborder;
+    border: 6px outset buttonborder;
     border-radius: 25px;
     color: buttontext;
     background-color: buttonface;
     text-decoration: none;
 
+}
+
+
+body {
+background-color: #333;
+color: white;
+}
+
+a {
+    color: #ffc107;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background-color: #333;
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.to_do_item {
+    margin: 0;
+    font-size: 50px;
+    color:red;
+}
+
+.to_do_done_item {
+    margin: 0;
+    font-size: 50px;
+    color: green;
+}
+
+.to_do_button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 3px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.to_do_button:hover {
+    background-color: #0056b3;
 }
